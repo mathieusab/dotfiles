@@ -6,7 +6,7 @@
 alias cat="batcat"
 alias cd="z"
 alias ls="eza"
-alias l="eza -l"
+alias l="eza -la"
 alias lst="eza -l -T"
 alias mkdir="mkdir -pv"
 
