@@ -1,6 +1,6 @@
 # mathieunix dotfiles
 ## Installation
-### Packages à installer en premier
+### Packages prerequis
 
 fd
 ```
@@ -39,10 +39,10 @@ stow
 sudo apt install -y stow
 ```
 
-### Shell
-Ajouter à la fin du ~/.bashrc de la ligne qui appelle le fichier custom puis sourcer le bashrc
+### Lancement du script d'installation
 
 ```
-echo "[ -f ~/.mathieunix_dotfiles/bashrc ] && source ~/.mathieunix_dotfiles/bashrc" >> ~/.bashrc
-source ~/.bashrc
+git clone https://github.com/mathieusab/dotfiles.git ~/dotfiles
+chmod +x ~/dotfiles/install.sh
+~/dotfiles/install.sh
 ```
