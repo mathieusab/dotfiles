@@ -35,6 +35,3 @@ sudo apt install -y stow
 mv ~/.bashrc ~/.bashrc.bak
 cd ~/dotfiles
 stow --ignore=install.sh .
-
-## Source
-eval "$(cat ~/.bashrc | tail -n +10)"

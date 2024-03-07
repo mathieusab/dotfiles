@@ -53,4 +53,6 @@ sudo apt install -y stow
 git clone git@github.com:mathieusab/dotfiles.git ~/dotfiles
 chmod +x ~/dotfiles/install.sh
 ~/dotfiles/install.sh
+source ~/.bashrc
+
 ```
