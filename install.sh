@@ -32,4 +32,9 @@ ln -s /usr/bin/batcat ~/.local/bin/bat
 sudo apt install -y stow
 
 ## Remplacement
-stow --dir=$HOME/dotfiles --adopt
+mv ~/.bashrc ~/.bashrc.bak
+cd $HOME/dotfiles
+stow .
+
+## Source
+source ~/.bashrc
