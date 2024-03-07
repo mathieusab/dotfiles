@@ -12,6 +12,7 @@ sudo apt install -y mc
 
 # zoxide
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+export PATH=$PATH:$HOME/.local/bin
 
 # eza
 sudo apt update
