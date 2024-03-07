@@ -36,7 +36,7 @@ sudo apt install -y eza
 
 stow
 ```
-sudo apt install stow
+sudo apt install -y stow
 ```
 
 ### Shell
