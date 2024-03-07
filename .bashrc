@@ -26,7 +26,6 @@ esac
 
 ### Navigation
 alias cat="batcat"
-alias cd="z"
 alias ls="eza"
 alias l="eza -l"
 alias lst="eza -l -T"
