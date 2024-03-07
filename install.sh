@@ -5,10 +5,10 @@
 sudo apt install fd-find && ln -s $(which fdfind) ~/.local/bin/fd
 
 # fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install --all
 
 # mc
-sudo apt install mc
+sudo apt install -y mc
 
 # zoxide
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
@@ -23,8 +23,13 @@ sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.lis
 sudo apt update
 sudo apt install -y eza
 
+# bat
+sudo apt install -y bat
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
+
 # stow
-sudo apt install stow
+sudo apt install -y stow
 
 ## Remplacement
 stow --dir=$HOME/dotfiles --adopt

@@ -9,12 +9,12 @@ sudo apt install fd-find && ln -s $(which fdfind) ~/.local/bin/fd
 
 fzf
 ```
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install --all
 ```
 
 mc (Midnight Commander)
 ```
-sudo apt install mc
+sudo apt install -y mc
 ```
 
 zoxide
@@ -32,6 +32,13 @@ echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable
 sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
 sudo apt update
 sudo apt install -y eza
+```
+
+bat
+```
+sudo apt install -y bat
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
 ```
 
 stow
