@@ -4,6 +4,16 @@ case $- in
       *) return;;
 esac
 
+
+#  __  __       _   _     _                  _
+# |  \/  |     | | | |   (_)                (_)
+# | \  / | __ _| |_| |__  _  ___ _   _ _ __  ___  __
+# | |\/| |/ _` | __| |_ \| |/ _ \ | | | '_ \| \ \/ /
+# | |  | | (_| | |_| | | | |  __/ |_| | | | | |>  <
+# |_|  |_|\__,_|\__|_| |_|_|\___|\__,_|_| |_|_/_/\_\
+#
+
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
