@@ -1,4 +1,16 @@
-# MATHIEU ####################
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
 
 ## Alias
 
@@ -6,9 +18,11 @@
 alias cat="batcat"
 alias cd="z"
 alias ls="eza"
-alias l="eza -la"
+alias l="eza -l"
 alias lst="eza -l -T"
 alias mkdir="mkdir -pv"
+alias ll='ls -alF'
+alias la='ls -A'
 
 ### Git
 alias gs="git status"
@@ -20,12 +34,28 @@ alias gpl="git pull"
 alias gl="git log --oneline"
 alias gc="git checkout"
 
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
 ## Variables
+
+### History
+
+HISTCONTROL=ignoreboth
+HISTSIZE=1000
+HISTFILESIZE=2000
+HISTTIMEFORMAT="%F %T "
+shopt -s checkwinsize
+shopt -s histappend
 
 ### FZF
 
 FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
-HISTTIMEFORMAT="%F %T "
 
 ### Prompt
 
@@ -50,6 +80,34 @@ function n() {
 
 export -f n
 
-eval "$(zoxide init bash --cmd cd)"
+## Completion
 
-# MATHIEU ####################
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+# pyautocompleteoptions
+if [ -d "$HOME/.pyautocomplete" ]; then
+        for i in `find $HOME/.pyautocomplete -maxdepth 1 -type f -name "*sh"`; do source $i; done
+fi
+
+# pyautocompleteoptions
+if [ -d "$HOME/.pyautocomplete" ]; then
+        for i in `find $HOME/.pyautocomplete -maxdepth 1 -type f -name "*sh"`; do source $i; done
+fi
+
+# pyautocompleteoptions
+if [ -d "$HOME/.pyautocomplete" ]; then
+        for i in `find $HOME/.pyautocomplete -maxdepth 1 -type f -name "*sh"`; do source $i; done
+fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+eval "$(zoxide init bash --cmd cd)"
