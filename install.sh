@@ -33,8 +33,8 @@ sudo apt install -y stow
 
 ## Remplacement
 mv ~/.bashrc ~/.bashrc.bak
-cd $HOME/dotfiles
-stow .
+cd ~/dotfiles
+stow --ignore=install.sh .
 
 ## Source
-source ~/.bashrc
+eval "$(cat ~/.bashrc | tail -n +10)"
