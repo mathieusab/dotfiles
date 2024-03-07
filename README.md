@@ -34,6 +34,11 @@ sudo apt update
 sudo apt install -y eza
 ```
 
+stow
+```
+sudo apt install stow
+```
+
 ### Shell
 Ajouter à la fin du ~/.bashrc de la ligne qui appelle le fichier custom puis sourcer le bashrc
 
