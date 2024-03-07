@@ -2,12 +2,15 @@
 
 ## Alias
 
+### Navigation
 alias cat="batcat"
 alias cd="z"
 alias ls="eza"
 alias l="eza -l"
 alias lst="eza -l -T"
+alias mkdir="mkdir -pv"
 
+### Git
 alias gs="git status"
 alias ga="git add"
 alias gd="git diff"
