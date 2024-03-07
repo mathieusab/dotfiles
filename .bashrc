@@ -39,7 +39,7 @@ fi
 ## Functions
 
 function n() {
-  file_selected="$(fzf --preview 'batcat --color=always --style plain {}')"
+  file_selected="$(find . -type f -not -path '*/\.git/*' | fzf --preview 'batcat --color=always --style plain {}')"
   if [ -z "$file_selected" ]
   then
     echo "No file selected"
