@@ -50,7 +50,7 @@ sudo apt install -y stow
 ### Lancement du script d'installation
 
 ```
-git clone git@github.com:mathieusab/dotfiles.git ~/dotfiles
+git clone https://github.com/mathieusab/dotfiles.git ~/dotfiles
 chmod +x ~/dotfiles/install.sh
 ~/dotfiles/install.sh
 source ~/.bashrc
